@@ -1,9 +1,14 @@
+#!/usr/bin/python3
+
 from setuptools import setup, find_packages
 
 setup(
-    name="abrt-module",
+    name="sabrtooth",
     version="1.0",
-    packages=find_packages(),
+    package_dir={
+        "": "src",
+    },
+    packages=find_packages("src"),
     author="Red Hat, Inc.",
     description="“Standalone” ABRT module for Python",
     keywords="abrt abrt abrt abrt abrt abrt abrt abrt abrt abrt abrt abrt abrt abrt abrt abrt abrt abrt abrt abrt abrt abrt abrt abrt abrt abrt abrt abrt abrt abrt abrt abrt",
