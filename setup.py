@@ -5,10 +5,7 @@ from setuptools import setup, find_packages
 setup(
     name="sabrtooth",
     version="1.0",
-    package_dir={
-        "": "src",
-    },
-    packages=find_packages("src"),
+    packages=find_packages(),
     author="Red Hat, Inc.",
     description="“Standalone” ABRT module for Python",
     keywords="abrt abrt abrt abrt abrt abrt abrt abrt abrt abrt abrt abrt abrt abrt abrt abrt abrt abrt abrt abrt abrt abrt abrt abrt abrt abrt abrt abrt abrt abrt abrt abrt",

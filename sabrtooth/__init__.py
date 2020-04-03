@@ -1,3 +1,5 @@
+# -*- coding: UTF-8 -*-
+
 # Copyright (c) 2020 Red Hat, Inc.
 #
 # Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -55,5 +57,12 @@ def _handle_exception(etype, value, tb, name, version, url):
     return sys.__excepthook__(etype, value, tb)
 
 
-def register(name, version, url):
+def register(name: str, version: str, url: str):
+    """
+    Registers an exception handler that sends a report to ABRT Analytics.
+
+    :param name: Name of the project.
+    :param version: Current version of the project.
+    :param url: Address to a running instance of ABRT Analytics.
+    """
     sys.excepthook = lambda etype, value, tb: _handle_exception(etype, value, tb, name, version, url)
