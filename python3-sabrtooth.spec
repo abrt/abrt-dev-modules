@@ -20,6 +20,7 @@ BuildArch: noarch
 
 Summary:       %{summary}
 BuildRequires: python3-devel
+Requires:      python3-satyr
 
 %{?python_enable_dependency_generator}
 %{?python_provide:%python_provide python3-%{srcname}}
