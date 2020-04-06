@@ -1,3 +1,5 @@
+[![Documentation Status](https://readthedocs.org/projects/sabrtooth-python/badge/?version=latest)](https://sabrtooth-python.readthedocs.io/en/latest/?badge=latest)
+
 # sABRTooth-python
 Developer module for error and exception tracking in Python applications
 
