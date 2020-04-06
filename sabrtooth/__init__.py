@@ -27,10 +27,12 @@ import urllib.parse
 
 import distro
 import requests
-import satyr
 
 
 def _handle_exception(etype, value, tb, name, version, url):
+    # Not (yet) available on PyPI, so RTD builds fail.
+    import satyr
+
     try:
         stack_trace = "".join(traceback.format_exception(etype, value, tb))
         report = satyr.Report()
