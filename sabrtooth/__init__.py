@@ -49,7 +49,8 @@ def _handle_exception(etype, value, tb, name, version, url):
         files = {
             "file": ("file", report.to_json()),
         }
-        response = requests.post(url, headers=headers, files=files)
+
+        requests.post(url, headers=headers, files=files)
 
     except:
         # Silently ignore any error in this hook,
