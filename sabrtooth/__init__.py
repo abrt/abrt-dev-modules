@@ -29,7 +29,7 @@ import distro
 import requests
 
 
-def _handle_exception(etype, value, tb, name, version, url):
+def _handle_exception(etype, value, tb, name, url):
     # Not (yet) available on PyPI, so RTD builds fail.
     import satyr
 
@@ -60,12 +60,11 @@ def _handle_exception(etype, value, tb, name, version, url):
     return sys.__excepthook__(etype, value, tb)
 
 
-def register(name: str, version: str, url: str):
+def register(name: str, url: str):
     """
     Registers an exception handler that sends a report to ABRT Analytics.
 
     :param name: Name of the project.
-    :param version: Current version of the project.
     :param url: Address to a running instance of ABRT Analytics.
     """
-    sys.excepthook = lambda etype, value, tb: _handle_exception(etype, value, tb, name, version, url)
+    sys.excepthook = lambda etype, value, tb: _handle_exception(etype, value, tb, name, url)

@@ -12,9 +12,8 @@ Example
     import sabrtooth
 
     NAME = "application"
-    VERSION = "1.0"
     FAF_URI = "http://localhost:8080/faf/" # ABRT Analytics instance to use for reporting
 
-    sabrtooth.register(NAME, VERSION, FAF_URI)
+    sabrtooth.register(NAME, FAF_URI)
 
     0/0
